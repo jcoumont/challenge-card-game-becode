@@ -118,31 +118,31 @@ class ScoreBoard:
             elif comparaison == 0:
                 winners.append(player)
         return winners
-    
+
     def hasSureWinner(self) -> bool:
-        '''
+        """
         Function that will determine if a player is sure to win the game by checking the card still available and the scores
 
         :return : a bool that indicates if there is a predicated winner
-        '''
+        """
         # How many turns can play each player ?
         players = list(self.dico_score.keys())
         min_card_left = players[0].number_of_cards
         for player in players[1:]:
             if min_card_left > player.number_of_cards:
                 min_card_left = player.number_of_cards
-        
+
         # Is he sure to win ?
         for player in players:
             his_score = self.dico_score[player]
             b_winner = True
-            for opponent in players: 
-                if player != opponent: # don't check with himself
-                    if his_score <= self.dico_score[opponent] + min_card_left :
+            for opponent in players:
+                if player != opponent:  # don't check with himself
+                    if his_score <= self.dico_score[opponent] + min_card_left:
                         b_winner = False
             if b_winner:
-                break # No need to continue the loop due at least on player is sure to win
-        
+                break  # No need to continue the loop due at least on player is sure to win
+
         return b_winner
 
 
@@ -187,7 +187,10 @@ class Board:
         # Start the play
         self.history_cards = []
 
-        while all(player.number_of_cards > 0 for player in self.players) and not self.score_board.hasSureWinner():
+        while (
+            all(player.number_of_cards > 0 for player in self.players)
+            and not self.score_board.hasSureWinner()
+        ):
             self.active_cards = []
             self.turn_count += 1
 
