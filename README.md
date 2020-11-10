@@ -5,8 +5,8 @@ Challenge card game beCode is an card game developed in Python
 This project has for objective to introduce de OOP in Python with a small card game.
 ## How
 The game starts by creating 4 players, initializes a deck of 52 cards and distributes to each player a random set of cards.
-On each turn, each player play a random card.
-The game is finish when all players have played all their cards.
+On each turn, each player plays a random card.
+The game is finish when all players have played all their cards or if a player is sure to win due his high score.
 ## Functionalities
 ### Must have
     - [x] working until each player doesn't have any card left
@@ -14,7 +14,7 @@ The game is finish when all players have played all their cards.
     - [x] game distributes all the cards
 ### Nice to have
     - [x] interactive mode that ask the player which card he wants to play
-    - [ ] create game over conditions
+    - [x] create game over conditions 
     - [x] add points if the card is the most powerfull played
     - [x] select the winner at the end of the game  
 ## Who
