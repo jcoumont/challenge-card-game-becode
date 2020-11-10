@@ -88,7 +88,7 @@ class ScoreBoard:
 
     def award_points(self, winning_cards: List[Card]):
         """
-        Procedure that increased the score of players who have played the best card.
+        Procedure that increased the score of players who have played the best cards.
         """
         for player in self.dico_score.keys():
             if player.history[-1] in winning_cards:
