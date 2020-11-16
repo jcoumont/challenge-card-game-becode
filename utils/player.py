@@ -1,4 +1,5 @@
 import random
+from typing import List
 
 from utils.card import Card
 
@@ -10,8 +11,8 @@ class Player:
     - his list of history card (played card) - history
     """
 
-    history: list[Card]
-    cards: list[Card]
+    history: List[Card]
+    cards: List[Card]
 
     def __init__(self, name: str, interactive: bool = False):
         """

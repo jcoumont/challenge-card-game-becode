@@ -16,6 +16,7 @@ class Deck:
         """
         Constructor
         """
+        pass
 
     def __str__(self):
         print(self.cards)
@@ -55,7 +56,7 @@ class Deck:
         """
         random.shuffle(self.cards)
 
-    def distribute(self, players: list[Player]):
+    def distribute(self, players: List[Player]):
         """
         Funcion that distribute the card to a list of players
 
@@ -156,8 +157,8 @@ class Board:
     """
 
     turn_count = int
-    active_cards: list[Card]
-    history_cards: list[list[Card]]
+    #active_cards: list[Card]
+    #history_cards: list[list[Card]]
 
     def __init__(self, players: List[Player]):
         """
@@ -167,8 +168,8 @@ class Board:
         """
         self.turn_count = 0
         self.players = players
-        self.active_cards = list[Card]
-        self.history_cards = list[list[Card]]
+        self.active_cards = List[Card]
+        self.history_cards = List[List[Card]]
         self.score_board = ScoreBoard(players)
 
     def __str__(self):
