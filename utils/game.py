@@ -68,7 +68,8 @@ class Deck:
                     player.add_card(self.cards[0])
                     self.cards.pop(0)
                 except IndexError:
-                    break  # To leave when no more cards due an 52%len(players) != 0
+                    # To leave when no more cards due an 52%len(players) != 0
+                    break
 
 
 class ScoreBoard:
@@ -89,7 +90,8 @@ class ScoreBoard:
 
     def award_points(self, winning_cards: List[Card]):
         """
-        Procedure that increased the score of players who have played the best cards.
+        Procedure that increased the score of players
+        who have played the best cards.
         """
         for player in self.dico_score.keys():
             if player.history[-1] in winning_cards:
@@ -122,7 +124,8 @@ class ScoreBoard:
 
     def hasSureWinner(self) -> bool:
         """
-        Function that will determine if a player is sure to win the game by checking the card still available and the scores
+        Function that will determine if a player is sure to win the game
+        by checking the card stil available and the scores
 
         :return : a bool that indicates if there is a predicated winner
         """
@@ -142,7 +145,9 @@ class ScoreBoard:
                     if his_score <= self.dico_score[opponent] + min_card_left:
                         b_winner = False
             if b_winner:
-                break  # No need to continue the loop due at least on player is sure to win
+                # No need to continue the loop due
+                # at least on player is sure to win
+                break
 
         return b_winner
 
@@ -157,8 +162,6 @@ class Board:
     """
 
     turn_count = int
-    #active_cards: list[Card]
-    #history_cards: list[list[Card]]
 
     def __init__(self, players: List[Player]):
         """

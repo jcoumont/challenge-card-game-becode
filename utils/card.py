@@ -70,9 +70,7 @@ class Card(Symbol):
         return f"{self.value} {self.icon}"
 
     def __repr__(self):
-        if self.color == "red":
-            return f"\033[91m{self.value} {self.icon}\033[0m"
-        return f"{self.value} {self.icon}"
+        return self.__str__()
 
     @property
     def force(self) -> int:

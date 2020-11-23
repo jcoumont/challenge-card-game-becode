@@ -35,7 +35,8 @@ class Player:
 
     def play(self) -> Card:
         """
-        Function that will play a random card or ask the player to choose it if interactive is True.
+        Function that will play a random card or ask the player
+        to choose it if interactive is True.
 
         :return A Card that is the played card
         """
@@ -82,7 +83,8 @@ class Player:
     @property
     def number_of_cards(self) -> int:
         """
-        Property that will give the amount of cards in the player's hand (cards to play)
+        Property that will give the amount of cards in the player's hand
+        (cards to play)
 
         :return: an int that is the amount of cards in the player's hand
         """
