@@ -19,7 +19,8 @@ class Player:
         Constructor
 
         :param name : A str that is the player name
-        :param interactive : A bool that indicate if the player choose himself the card to play
+        :param interactive : A bool that indicate if the player
+                             chooses himself the card to play
         """
         self.name = name
         self.history = []
@@ -48,7 +49,7 @@ class Player:
                     in_choice = int(input("Which card to play ? (number)"))
                     played_card = self.cards[in_choice - 1]
                     break
-                except:
+                except Exception:
                     pass
 
         else:
